@@ -22,8 +22,8 @@ class PaytmController extends Controller
       $paytm_conf = Config::get('paytm');
       
       $this->_api_context =  new \Paytm\Rest\ApiContext(new OAuthTokenCredential(
-              $paytm_conf['client_id'],
-              $paytm_conf['secret'])
+              $paytm_conf['merchant_id'],
+              $paytm_conf['merchant_key'])
       );
       $this->_api_context->setConfig($paytm_conf['settings']);
   }

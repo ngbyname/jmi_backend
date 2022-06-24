@@ -50,7 +50,7 @@
         <section class="col-lg-12">
             <div class="checkout_details mt-3">
                 <div class="row">
-                    @php($config=\App\CentralLogics\Helpers::get_business_settings('paypal'))
+                    @php($config=\App\CentralLogics\Helpers::get_business_settings('paytm'))
                     @if($config['status'])
                         <div class="col-md-6 mb-4" style="cursor: pointer">
                             <div class="card">

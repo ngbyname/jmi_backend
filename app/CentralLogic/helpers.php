@@ -18,4 +18,22 @@ class Helpers
         }
         return $err_keeper;
     }
+
+    public static function get_business_settings($name)
+    {
+        $config=null;
+
+        $paymentmethod = BusinessSetting::where('key',$name)->first();
+
+        if($paymentmethod){
+            $config = json_decode(json_encode($paymentmethod->value),true);
+            $config = json_decode($config, true);
+        }
+
+        return $config;
+    }
+
+    public static function currency_code(){
+        return BusinessSetting::where(['key' => 'currency'])->first()->value;
+    }
 }
