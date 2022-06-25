@@ -44,7 +44,7 @@ class PaytmController extends Controller
         $items_array = [];
         $item = new Item();
         $number = sprintf("%0.2f", $order['order_amount']);
-        $item->setName($order->customer['f_name'])
+        $item->setName(session('f_name'))
             ->setCurrency(Helpers::currency_code())
             ->setQuantity(1)
             ->setPrice($number);
