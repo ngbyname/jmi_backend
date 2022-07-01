@@ -49,6 +49,7 @@ Route::group(['namespace' => 'Api\V1'], function () {
             Route::put('refund-request', 'OrderController@refund_request');
             Route::get('track', 'OrderController@track_order');
             Route::put('payment-method', 'OrderController@update_payment_method');
+            //Route::post('payment-paytm', 'PaymentController@initiate_payment');
         });
             });
             

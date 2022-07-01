@@ -6,7 +6,6 @@
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
-        "anandsiddharth/laravel-paytm-wallet": "^2.0",
         "codingyu/ueditor": "^3.0",
         "encore/laravel-admin": "1.*",
         "fruitcake/laravel-cors": "^2.0",
@@ -16,6 +15,7 @@
         "laravel/passport": "^10.2",
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
+        "paytm/paytm-pg": "^0.0.5",
         "paytm/paytmchecksum": "^1.1"
     },
     "require-dev": {
@@ -34,7 +34,8 @@
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/",
-            "paytm\\paytmchecksum\\": "paytmchecksum/"
+            "paytm\\paytmchecksum\\": "paytmchecksum/",
+            "paytmpg\\": "vendor/paytm/paytm-pg"
         }
     },
     "autoload-dev": {

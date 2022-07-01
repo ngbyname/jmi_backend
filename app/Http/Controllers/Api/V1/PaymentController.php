@@ -1,10 +1,16 @@
 <?php
 
-namespace App\Http\Controllers;
+//namespace App\Http\Controllers;
+
+namespace App\Http\Controllers\Api\V1;
+
+use App\Http\Controllers\Controller;
 
 use App\Models\Order;
 use App\Models\User;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Api\V1\PaytmPayment;
+
 
 class PaymentController extends Controller
 {
@@ -54,5 +60,11 @@ class PaymentController extends Controller
         }
         return response()->json(['message' => 'Payment failed'], 403);*/
          return redirect('&status=success');
+    }
+
+    public function initiate_payment()
+    {
+       $paytmPayment = new PaytmPayment();
+       $paytmPayment->callPaytmApi();
     }
 }
