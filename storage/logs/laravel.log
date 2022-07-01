@@ -18148,3 +18148,7 @@ Did you mean one of these?
 #28 /var/www/html/jmi_backend/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle()
 #29 {main}
 "} 
+[2022-07-01 10:07:56] local.ERROR: App\Http\Controllers\Api\V1\PaytmPayment::callPaytmApi(): Failed opening required 'app/Http/Controllers/Api/V1/PaytmChecksum.php' (include_path='.:/usr/share/php') {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): App\\Http\\Controllers\\Api\\V1\\PaytmPayment::callPaytmApi(): Failed opening required 'app/Http/Controllers/Api/V1/PaytmChecksum.php' (include_path='.:/usr/share/php') at /var/www/html/jmi_backend/app/Http/Controllers/Api/V1/PaytmPayment.php:16)
+[stacktrace]
+#0 {main}
+"} 

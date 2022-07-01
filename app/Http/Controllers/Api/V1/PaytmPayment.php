@@ -7,13 +7,15 @@
 
 namespace App\Http\Controllers\Api\V1;
 
+use App\Http\Controllers\Api\V1\PaytmChecksum;
+
 class PaytmPayment{
 
 
 public function callPaytmApi()
 {
 
-    require_once("app/Http/Controllers/Api/V1/PaytmChecksum.php");
+    // require_once("app/Http/Controllers/Api/V1/PaytmChecksum.php");
 
 
     $paytmParams = array();
@@ -22,7 +24,7 @@ public function callPaytmApi()
     "requestType"  => "Payment",
     "mid" => "pFtReg33593395168554",
     "websiteName"  => "WEBSTAGING",
-    "orderId" => "ORDERID_93761",
+    "orderId" => "ORDERID_9376134",
     "callbackUrl" => "https://<callback URL to be used by merchant>",
     "txnAmount"  => array(
     "value"  => "1.00",
@@ -46,7 +48,7 @@ public function callPaytmApi()
     $post_data = json_encode($paytmParams, JSON_UNESCAPED_SLASHES);
 
     /* for Staging */
-    $url = "https://securegw-stage.paytm.in/theia/api/v1/initiateTransaction?mid=pFtReg33593395168554&orderId=ORDERID_93761";
+    $url = "https://securegw-stage.paytm.in/theia/api/v1/initiateTransaction?mid=pFtReg33593395168554&orderId=ORDERID_9376134";
 
     /* for Production */
     // $url = "https://securegw.paytm.in/theia/api/v1/initiateTransaction?mid=YOUR_MID_HERE&orderId=ORDERID_93761";
@@ -57,7 +59,7 @@ public function callPaytmApi()
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type: application/json"));
     $response = curl_exec($ch);
-    print_r($response);
+    return json_decode($response,true);
 
 }
 
