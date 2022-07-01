@@ -5,11 +5,20 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'b534a4993fdf5ade459ebee03d5639234d86d754',
+        'reference' => '0eb6a1b52fcf85e1a3377fe820e9a512ac2c4422',
         'name' => 'laravel/laravel',
         'dev' => true,
     ),
     'versions' => array(
+        'anandsiddharth/laravel-paytm-wallet' => array(
+            'pretty_version' => 'v2.0.0',
+            'version' => '2.0.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../anandsiddharth/laravel-paytm-wallet',
+            'aliases' => array(),
+            'reference' => '5342add0719e9c5ca94fdd13f766e6a810f2ef45',
+            'dev_requirement' => false,
+        ),
         'asm89/stack-cors' => array(
             'pretty_version' => 'v2.0.3',
             'version' => '2.0.3.0',
@@ -526,7 +535,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'b534a4993fdf5ade459ebee03d5639234d86d754',
+            'reference' => '0eb6a1b52fcf85e1a3377fe820e9a512ac2c4422',
             'dev_requirement' => false,
         ),
         'laravel/passport' => array(

@@ -210,6 +210,7 @@ class ComposerStaticInit6722fa4d27423fed3a42908b15ee9bf7
         array (
             'Asm89\\Stack\\' => 12,
             'App\\' => 4,
+            'Anand\\LaravelPaytmWallet\\' => 25,
         ),
     );
 
@@ -656,6 +657,10 @@ class ComposerStaticInit6722fa4d27423fed3a42908b15ee9bf7
         array (
             0 => __DIR__ . '/../..' . '/app',
         ),
+        'Anand\\LaravelPaytmWallet\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/anandsiddharth/laravel-paytm-wallet/src',
+        ),
     );
 
     public static $prefixesPsr0 = array (
@@ -683,6 +688,19 @@ class ComposerStaticInit6722fa4d27423fed3a42908b15ee9bf7
     );
 
     public static $classMap = array (
+        'Anand\\LaravelPaytmWallet\\Contracts\\Factory' => __DIR__ . '/..' . '/anandsiddharth/laravel-paytm-wallet/src/Contracts/Factory.php',
+        'Anand\\LaravelPaytmWallet\\Contracts\\Provider' => __DIR__ . '/..' . '/anandsiddharth/laravel-paytm-wallet/src/Contracts/Provider.php',
+        'Anand\\LaravelPaytmWallet\\Facades\\PaytmWallet' => __DIR__ . '/..' . '/anandsiddharth/laravel-paytm-wallet/src/Facades/PaytmWallet.php',
+        'Anand\\LaravelPaytmWallet\\PaytmWalletManager' => __DIR__ . '/..' . '/anandsiddharth/laravel-paytm-wallet/src/PaytmWalletManager.php',
+        'Anand\\LaravelPaytmWallet\\PaytmWalletServiceProvider' => __DIR__ . '/..' . '/anandsiddharth/laravel-paytm-wallet/src/PaytmWalletServiceProvider.php',
+        'Anand\\LaravelPaytmWallet\\Providers\\BalanceCheckProvider' => __DIR__ . '/..' . '/anandsiddharth/laravel-paytm-wallet/src/Providers/BalanceCheckProvider.php',
+        'Anand\\LaravelPaytmWallet\\Providers\\PaytmAppProvider' => __DIR__ . '/..' . '/anandsiddharth/laravel-paytm-wallet/src/Providers/PaytmAppProvider.php',
+        'Anand\\LaravelPaytmWallet\\Providers\\PaytmWalletProvider' => __DIR__ . '/..' . '/anandsiddharth/laravel-paytm-wallet/src/Providers/PaytmWalletProvider.php',
+        'Anand\\LaravelPaytmWallet\\Providers\\ReceivePaymentProvider' => __DIR__ . '/..' . '/anandsiddharth/laravel-paytm-wallet/src/Providers/ReceivePaymentProvider.php',
+        'Anand\\LaravelPaytmWallet\\Providers\\RefundPaymentProvider' => __DIR__ . '/..' . '/anandsiddharth/laravel-paytm-wallet/src/Providers/RefundPaymentProvider.php',
+        'Anand\\LaravelPaytmWallet\\Providers\\RefundStatusCheckProvider' => __DIR__ . '/..' . '/anandsiddharth/laravel-paytm-wallet/src/Providers/RefundStatusCheckProvider.php',
+        'Anand\\LaravelPaytmWallet\\Providers\\StatusCheckProvider' => __DIR__ . '/..' . '/anandsiddharth/laravel-paytm-wallet/src/Providers/StatusCheckProvider.php',
+        'Anand\\LaravelPaytmWallet\\Traits\\HasTransactionStatus' => __DIR__ . '/..' . '/anandsiddharth/laravel-paytm-wallet/src/Traits/HasTransactionStatus.php',
         'App\\Admin\\Controllers\\AuthController' => __DIR__ . '/../..' . '/app/Admin/Controllers/AuthController.php',
         'App\\Admin\\Controllers\\ExampleController' => __DIR__ . '/../..' . '/app/Admin/Controllers/ExampleController.php',
         'App\\Admin\\Controllers\\FoodTypeController' => __DIR__ . '/../..' . '/app/Admin/Controllers/FoodTypeController.php',
@@ -697,6 +715,7 @@ class ComposerStaticInit6722fa4d27423fed3a42908b15ee9bf7
         'App\\Http\\Controllers\\Api\\V1\\OrderController' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/V1/OrderController.php',
         'App\\Http\\Controllers\\Api\\V1\\PaymentController' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/V1/PaymentController.php',
         'App\\Http\\Controllers\\Api\\V1\\PaytmChecksum' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/V1/PaytmChecksum.php',
+        'App\\Http\\Controllers\\Api\\V1\\PaytmController' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/V1/PaytmController.php',
         'App\\Http\\Controllers\\Api\\V1\\PaytmPayment' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/V1/PaytmPayment.php',
         'App\\Http\\Controllers\\Api\\V1\\ProductController' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/V1/ProductController.php',
         'App\\Http\\Controllers\\ArticlesController' => __DIR__ . '/../..' . '/app/Http/Controllers/ArticlesController.php',

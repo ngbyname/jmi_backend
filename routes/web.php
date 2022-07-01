@@ -24,14 +24,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-//Paytm Payment
-Route::group(['prefix' => 'payment-paytm'], function () {
-    Route::get('/', [PaymentController::Class, 'initiate_payment'])->name('payment-paytm');
-    Route::get('set-payment-method/{name}', [PaymentController::Class, 'set_payment_method'])->name('set-payment-method');
-});
 
-Route::post('paytm-payment',[PaytmController::Class, 'paytmPayment'])->name('paytm.payment');
+Route::post('payment-paytm',[PaytmController::Class, 'initiatePayment'])->name('paytm.payment');
 Route::post('paytm-callback',[PaytmController::Class, 'paytmCallback'])->name('paytm.callback');
-Route::get('paytm-status', [PaytmController::Class, 'getPaymentStatus'])->name('paytm-status');
-Route::get('payment-success', [PaymentController::Class, 'success'])->name('payment-success');
-Route::get('payment-fail', [PaymentController::Class, 'fail'])->name('payment-fail');
+Route::post('paytm-purchase',[PaytmController::Class, 'paytmPurchase'])->name('paytm.purchase');
+
+Route::post('/payment/status', [PaytmController::class,'paymentCallback'])->name('paytm.callback');

@@ -6,6 +6,19 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Anand\\LaravelPaytmWallet\\Contracts\\Factory' => $vendorDir . '/anandsiddharth/laravel-paytm-wallet/src/Contracts/Factory.php',
+    'Anand\\LaravelPaytmWallet\\Contracts\\Provider' => $vendorDir . '/anandsiddharth/laravel-paytm-wallet/src/Contracts/Provider.php',
+    'Anand\\LaravelPaytmWallet\\Facades\\PaytmWallet' => $vendorDir . '/anandsiddharth/laravel-paytm-wallet/src/Facades/PaytmWallet.php',
+    'Anand\\LaravelPaytmWallet\\PaytmWalletManager' => $vendorDir . '/anandsiddharth/laravel-paytm-wallet/src/PaytmWalletManager.php',
+    'Anand\\LaravelPaytmWallet\\PaytmWalletServiceProvider' => $vendorDir . '/anandsiddharth/laravel-paytm-wallet/src/PaytmWalletServiceProvider.php',
+    'Anand\\LaravelPaytmWallet\\Providers\\BalanceCheckProvider' => $vendorDir . '/anandsiddharth/laravel-paytm-wallet/src/Providers/BalanceCheckProvider.php',
+    'Anand\\LaravelPaytmWallet\\Providers\\PaytmAppProvider' => $vendorDir . '/anandsiddharth/laravel-paytm-wallet/src/Providers/PaytmAppProvider.php',
+    'Anand\\LaravelPaytmWallet\\Providers\\PaytmWalletProvider' => $vendorDir . '/anandsiddharth/laravel-paytm-wallet/src/Providers/PaytmWalletProvider.php',
+    'Anand\\LaravelPaytmWallet\\Providers\\ReceivePaymentProvider' => $vendorDir . '/anandsiddharth/laravel-paytm-wallet/src/Providers/ReceivePaymentProvider.php',
+    'Anand\\LaravelPaytmWallet\\Providers\\RefundPaymentProvider' => $vendorDir . '/anandsiddharth/laravel-paytm-wallet/src/Providers/RefundPaymentProvider.php',
+    'Anand\\LaravelPaytmWallet\\Providers\\RefundStatusCheckProvider' => $vendorDir . '/anandsiddharth/laravel-paytm-wallet/src/Providers/RefundStatusCheckProvider.php',
+    'Anand\\LaravelPaytmWallet\\Providers\\StatusCheckProvider' => $vendorDir . '/anandsiddharth/laravel-paytm-wallet/src/Providers/StatusCheckProvider.php',
+    'Anand\\LaravelPaytmWallet\\Traits\\HasTransactionStatus' => $vendorDir . '/anandsiddharth/laravel-paytm-wallet/src/Traits/HasTransactionStatus.php',
     'App\\Admin\\Controllers\\AuthController' => $baseDir . '/app/Admin/Controllers/AuthController.php',
     'App\\Admin\\Controllers\\ExampleController' => $baseDir . '/app/Admin/Controllers/ExampleController.php',
     'App\\Admin\\Controllers\\FoodTypeController' => $baseDir . '/app/Admin/Controllers/FoodTypeController.php',
@@ -20,6 +33,7 @@ return array(
     'App\\Http\\Controllers\\Api\\V1\\OrderController' => $baseDir . '/app/Http/Controllers/Api/V1/OrderController.php',
     'App\\Http\\Controllers\\Api\\V1\\PaymentController' => $baseDir . '/app/Http/Controllers/Api/V1/PaymentController.php',
     'App\\Http\\Controllers\\Api\\V1\\PaytmChecksum' => $baseDir . '/app/Http/Controllers/Api/V1/PaytmChecksum.php',
+    'App\\Http\\Controllers\\Api\\V1\\PaytmController' => $baseDir . '/app/Http/Controllers/Api/V1/PaytmController.php',
     'App\\Http\\Controllers\\Api\\V1\\PaytmPayment' => $baseDir . '/app/Http/Controllers/Api/V1/PaytmPayment.php',
     'App\\Http\\Controllers\\Api\\V1\\ProductController' => $baseDir . '/app/Http/Controllers/Api/V1/ProductController.php',
     'App\\Http\\Controllers\\ArticlesController' => $baseDir . '/app/Http/Controllers/ArticlesController.php',
