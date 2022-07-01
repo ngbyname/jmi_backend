@@ -13,15 +13,17 @@ class PaytmController extends Controller
      *
      * @return Response
      */
-    public function initiatePayment()
+    public function initiatePayment(Request $request)
     {
+        // dd($request->order['id'],$request->user);
+        //{"order":{"id":23,"amount":"2"},"user":{"id":3,"phonenumber":"1111111111","email":"xxxxxx@yahoo.com"}}
         $payment = PaytmWallet::with('receive');
         $payment->prepare([
-          'order' => $order->id,
-          'user' => $user->id,
-          'mobile_number' => $user->phonenumber,
-          'email' => $user->email,
-          'amount' => $order->amount,
+          'order' => $request->order['id'],
+          'user' => $request->user['id'],
+          'mobile_number' => $request->user['phonenumber'],
+          'email' => $request->user['email'],
+          'amount' => $request->order['amount'],
           'callback_url' => route('paytm.callback')
         ]);
         return $payment->receive();
