@@ -27,7 +27,7 @@ Route::group(['namespace' => 'Api\V1'], function () {
    
         
         Route::group(['prefix' => 'customer', 'middleware' => 'auth:api'], function () {
-            Route::get('notifications', 'NotificationController@get_notifications');
+            // Route::get('notifications', 'NotificationController@get_notifications');
             Route::get('info', 'CustomerController@info');
             Route::post('update-profile', 'CustomerController@update_profile');
             Route::post('update-interest', 'CustomerController@update_interest');

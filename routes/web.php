@@ -7,6 +7,7 @@ use App\Http\Controllers\Api\V1\PaytmPayment;
 use App\Http\Controllers;
 use App\Http\Controllers\Api\V1;
 use App\Http\Controllers\Api\V1\PaymentController;
+use App\Http\Controllers\Api\V1\PaytmController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,12 +26,12 @@ Route::get('/', function () {
 
 //Paytm Payment
 Route::group(['prefix' => 'payment-paytm'], function () {
-    Route::get('/', 'PaymentController@initiate_payment')->name('payment-paytm');
-    Route::get('set-payment-method/{name}', 'PaymentController@set_payment_method')->name('set-payment-method');
+    Route::get('/', [PaymentController::Class, 'initiate_payment'])->name('payment-paytm');
+    Route::get('set-payment-method/{name}', [PaymentController::Class, 'set_payment_method'])->name('set-payment-method');
 });
 
 Route::post('paytm-payment',[PaytmController::Class, 'paytmPayment'])->name('paytm.payment');
 Route::post('paytm-callback',[PaytmController::Class, 'paytmCallback'])->name('paytm.callback');
-Route::get('paytm-status', 'PaytmController@getPaymentStatus')->name('paytm-status');
-Route::get('payment-success', 'PaymentController@success')->name('payment-success');
-Route::get('payment-fail', 'PaymentController@fail')->name('payment-fail');
+Route::get('paytm-status', [PaytmController::Class, 'getPaymentStatus'])->name('paytm-status');
+Route::get('payment-success', [PaymentController::Class, 'success'])->name('payment-success');
+Route::get('payment-fail', [PaymentController::Class, 'fail'])->name('payment-fail');
