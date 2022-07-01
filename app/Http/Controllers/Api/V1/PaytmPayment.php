@@ -59,7 +59,8 @@ public function callPaytmApi()
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type: application/json"));
     $response = curl_exec($ch);
-    return json_decode($response,true);
+    print_r($response);
+    // return json_decode($response,true);
 
 }
 
