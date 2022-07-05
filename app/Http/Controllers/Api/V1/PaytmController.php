@@ -19,11 +19,11 @@ class PaytmController extends Controller
         //{"order":{"id":23,"amount":"2"},"user":{"id":3,"phonenumber":"1111111111","email":"xxxxxx@yahoo.com"}}
         $payment = PaytmWallet::with('receive');
         $payment->prepare([
-          'order' => $request->order['id'],
-          'user' => $request->user['id'],
-          'mobile_number' => $request->user['phonenumber'],
-          'email' => $request->user['email'],
-          'amount' => $request->order['amount'],
+          'order' => $request->customer_id,
+          'user' => $request->order_id,
+          'mobile_number' => $request->phone_number,
+          'email' => $request->email,
+          'amount' => $request->amount,
           'callback_url' => route('paytm.callback')
         ]);
         return $payment->receive();

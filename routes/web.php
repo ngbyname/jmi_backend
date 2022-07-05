@@ -25,7 +25,7 @@ Route::get('/', function () {
 });
 
 
-Route::post('payment-paytm',[PaytmController::Class, 'initiatePayment'])->name('paytm.payment');
+Route::get('payment-paytm',[PaytmController::Class, 'initiatePayment'])->name('paytm.payment');
 Route::post('paytm-callback',[PaytmController::Class, 'paytmCallback'])->name('paytm.callback');
 Route::post('paytm-purchase',[PaytmController::Class, 'paytmPurchase'])->name('paytm.purchase');
 
